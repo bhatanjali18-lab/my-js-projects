@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>exercise 8</title>
+  </head>
+  <body>
+    <button onclick="
+      updateCalc('1')
+      ">1</button>
+    <button onclick="updateCalc('2')">2</button>
+    <button onclick="updateCalc('+')">+</button>
+    <button onclick="calculate()">=</button>
+    <p class="js-calc">js-calculation</p>
+    <script>
+
+      let calculation=localStorage.getItem('calculation')||'';
+      document.querySelector('js-calc').innerHTML=calculation;
+      function updateCalc(value){
+        calculation+=value;
+        localStorage.setItem('calculation',calculation);
+         document.querySelector('js-calc').innerHTML=calculation;
+      }
+      function calculate(){
+        calculation=eval(calculation);
+        localStorage.setItem('calculation',calculation);
+        document.querySelector('.js-calc').innerHTML=calculation;
+      }
+      /*const product={
+        name:'basketball',
+        price:2095
+      }
+     // product.price=product.price+500;
+      //console.log(product);
+     /* product['delivery-time']='3 days';
+      console.log(product);
+      product.name='cricket';
+      console.log(product); 
+      function comparePrice(product1,product2){
+        if(product1.price<product2.price){
+          return product1;
+        }else{
+          return product2;
+        }
+      }
+      const product1={
+        name:'basketball',
+        price:2097
+      };
+      const product2={
+        name:'cricket',
+        price:56
+      }
+      console.log(comparePrice(product1,product2));
+      function isSame(prod1,prod2){
+        if(prod1.name===prod2.name && prod1.price===prod2.price){
+          return true;
+        }
+        return false;
+      }
+      const prod1={
+        name:'basketball',
+        price:678
+      }
+      const prod2={
+        name:'basketball',
+        price:90
+      }
+      //isSame(prod1,prod2);
+      console.log(isSame(prod1,prod2)); 
+      const text="heAlo";
+      console.log(text.toLocaleLowerCase());
+      console.log(text.repeat(3)); */
+      
+    </script>
+  </body>
+</html>

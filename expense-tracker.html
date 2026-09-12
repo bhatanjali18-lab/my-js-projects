@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Expense tracker</title>
+    <style>
+      body{
+        font-family: Arial,sans-serif;
+        max-width:500px;
+        margin:40px auto;
+        background: #f4f4f9;
+        color:#333
+      }
+      h1{
+        text-align:center;
+      }
+      #expense-form{
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px;
+        margin-bottom:20px
+      }
+      #expense-form input,
+      #expense-form select {
+        flex:1;
+        padding:8px;
+        min-width: 100px;
+
+      }
+      #expense-form button{
+        padding:8px 16px;
+        background: #4CAF50;
+        color:white;
+        border:none;
+        cursor:pointer;
+      }
+      #expense-list {
+        list-style:none;
+        padding:0;
+      }
+      #expense-list li{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        background: white;
+        padding: 10px;
+        margin-bottom: 6px;
+        border-radius:4px;
+        box-shadow:0 1px 3px rgba(0,0,0,0.1)
+      }
+      .delete-btn{
+        background: #e74c3c;
+        color:white;
+        border:none;
+        padding:4px 8px;
+        cursor:pointer;
+        border-radius:3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Expense tracker
+    </h1>
+    <form id="expense-form">
+      <input type="text" id="description" placeholder="Description" required/>
+      <input type="number" id="amount" placeholder="amount" required/>
+      <select id="category">
+        <option value="food">food</option>
+        <option value="transport">transport</option>
+        <option value="bills">bill</option>
+        <option value="other">Other</option>
+      </select> 
+      <button type="submit">add expenses</button>
+      </form>
+      <div>
+        <label>filter:</label>
+        <select id="filter-category">
+          <option value="all">All</option>
+          <option value="food">food</option>
+          <option value="transport">transport</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <h2>total: <span id="total">0</span></h2>
+      <ul id="expense-list"></ul>
+      <script src="scripts.js"></script>
+
+   
+  </body>
+</html>

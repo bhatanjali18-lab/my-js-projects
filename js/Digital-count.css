@@ -1,0 +1,20 @@
+body{
+  margin: 0;
+  height:100px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.clock{
+  text-align: center;
+}
+h1{
+  color: white;
+}
+#time{
+  color: aliceblue;
+  font-size: 79px;
+  font-weight: bold;
+}

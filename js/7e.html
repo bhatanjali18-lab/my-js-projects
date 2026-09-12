@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>7e</title>
+  </head>
+  <body>
+    <script>
+    /* function greet(name) {
+      if(!name){
+        console.log('hi there')
+      } else{
+
+      
+  console.log('Hello ${name}!');
+      }
+}*/
+function convertToFarenhit(celsius){
+  return (celsius*9/5)+32
+}
+//console.log(convertToFarenhit(25));
+function convertToCelsius(farenhit){
+  return(farenhit-32)*5/9;
+}
+//console.log(convertToFarenhit(67))
+
+
+  
+  function convertTemperature(degrees, unit) {
+  if (unit === 'C') {
+    return `${convertToFahrenheit(degrees)}F`;
+  } else if (unit === 'F') {
+    return `${convertToCelsius(degrees)}C`;
+  }
+}
+console.log(convertTemperature(25, 'C')); // '77F'
+console.log(convertTemperature(86, 'F')); // '30C'
+
+    </script>
+  </body>
+</html>

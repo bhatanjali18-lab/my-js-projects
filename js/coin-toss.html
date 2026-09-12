@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>coin toss game</title>
+
+  </head>
+  <body>
+    <button onclick="playGame('head')">head</button>
+    <button onclick="playGame('tail')">tail</button>
+    <script>
+      function playGame(guess){
+        const randomNumber=Math.random();
+        let result;
+        if(randomNumber>0.5){
+          result='head'
+        }else{
+          result='tail';
+        }
+        if(guess===result){
+          alert('you win');
+        
+        } else{
+          alert('lose')
+        }
+      }
+
+
+    </script>
+  </body>
+</html>

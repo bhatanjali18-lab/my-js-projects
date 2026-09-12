@@ -1,0 +1,10 @@
+<input class="js-name" placeholder="enter name">
+<button class="js-submit">submit</button>
+<p class="js-result"></p>
+<script>
+  document.querySelector('.js-submit').addEventListener('click',function(){
+    const text=document.querySelector('.js-name').value;
+
+    document.querySelector('.js-result').innerHTML='your name is ${text}';
+  });
+</script>

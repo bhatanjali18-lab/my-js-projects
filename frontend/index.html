@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Expense Tracker</h1>
+
+        <!-- Expense Form -->
+        <form id="expenseForm">
+
+            <input
+                type="text"
+                id="expenseName"
+                placeholder="Expense name"
+                required
+            >
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Amount"
+                required
+            >
+
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Education">Education</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input
+                type="date"
+                id="date"
+                required
+            >
+
+            <button type="submit" id="submitButton">
+                Add Expense
+            </button>
+
+        </form>
+
+
+        <!-- Total -->
+        <h2>
+            Total: ₹<span id="totalAmount">0</span>
+        </h2>
+
+
+        <!-- Search and Filter -->
+        <div class="filters">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search expense..."
+            >
+
+            <select id="categoryFilter">
+
+                <option value="All">All Categories</option>
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Education">Education</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Expenses -->
+        <h2>Expenses</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="expenseList">
+            </tbody>
+
+        </table>
+
+
+        <!-- Summary -->
+        <h2>Expense Summary</h2>
+
+        <div id="summary">
+            
+        </div>
+        <h2>Monthly Summary</h2>
+
+<div id="monthlySummary">
+</div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

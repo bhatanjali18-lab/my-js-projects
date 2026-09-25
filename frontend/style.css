@@ -1,0 +1,209 @@
+body {
+
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f2f2;
+
+}
+
+
+.container {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+}
+
+
+h1 {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+h2 {
+
+    margin-top: 25px;
+
+}
+
+
+form {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+input,
+select {
+
+    padding: 12px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+}
+
+
+button {
+
+    padding: 12px;
+
+    font-size: 16px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    background-color: #333;
+
+    color: white;
+
+}
+
+
+button:hover {
+
+    opacity: 0.8;
+
+}
+
+
+form button {
+
+    grid-column: span 2;
+
+}
+
+
+.filters {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+}
+
+
+.filters input,
+.filters select {
+
+    flex: 1;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 15px;
+
+}
+
+
+th,
+td {
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    text-align: center;
+
+}
+
+
+th {
+
+    background-color: #eee;
+
+}
+
+
+td button {
+
+    margin: 3px;
+
+    padding: 7px 12px;
+
+}
+
+
+#summary {
+
+    padding: 15px;
+
+    background-color: #f7f7f7;
+
+    border-radius: 8px;
+
+}
+
+
+#summary p {
+
+    font-size: 18px;
+
+    margin: 8px 0;
+
+}
+
+
+@media (max-width: 700px) {
+
+    form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    form button {
+
+        grid-column: span 1;
+
+    }
+
+    .filters {
+
+        flex-direction: column;
+
+    }
+
+    table {
+
+        font-size: 13px;
+
+    }
+
+}
